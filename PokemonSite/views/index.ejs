@@ -34,7 +34,24 @@
             </ul>
         </div>
     </nav>
-<!--    <div><%= title %></div>-->
+    <div>
+<!--This is the foreach i am trying to use-->
+
+                   
+<!-- This was a for loop example i thought might work
+        <% for(var i=0; i < monArr.length; i++) { %>
+            <tr>
+                <td>
+                    <%= monArr[0][0].id %>
+                </td>
+                <td>
+                    <%= monArr[0][0].name %>
+                </td>
+            </tr>
+            <% } %>
+-->
+    </div>
+    <!--
     <table class="table table-hover" id="landing_table">
         <thead>
             <tr>
@@ -44,13 +61,14 @@
                 <th>Type</th>
             </tr>
         </thead>
-        <tbody id = "tableRows">
-            
+        <tbody id="tableRows">
+
         </tbody>
     </table>
-    <script>        
-        for(i=0;i<150;i++){
-          $('#tableRows').append("<tr onclick=\"location.href='#one'\"><td>"+(i+1)+"</td><td><img src='images/sprites/"+(i+1)+".gif'></td><td>Bulbasaur</td><td><div>Grass</div><div>Poison</div></td></tr>");  
+-->
+    <script>
+        for (i = 0; i < 150; i++) {
+            $('#tableRows').append("<tr onclick=\"location.href='#one'\"><td>" + (i + 1) + "</td><td><img src='images/sprites/" + (i + 1) + ".gif'></td><td>Bulbasaur</td><td><div>Grass</div><div>Poison</div></td></tr>");
         }
     </script>
     <section ng-controller="mainController">
