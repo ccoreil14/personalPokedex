@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body ng-app="myApp" id="bod">
+    <nav class="navbar" id="navigator">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--
+                <a class="navbar-brand" href="#index"><img src="images/http://fontmeme.com/embed.php?text=Monster&name=Pokemon Hollow.ttf&size=114&style_color=15155E.png" alt="Dispute Bills" class="logo">
+                </a>
+-->
+                <a class="navbar-brand" href="#index"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#one">Container Page</a></li>
+                <li><a href="#two">Page 2</a></li>
+                <li><a href="#three">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <input type="text" class="form-control" placeholder="Search" id="search">
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--    <div><%= title %></div>-->
+    <table class="table table-hover" id="landing_table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Sprite</th>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id = "tableRows">
+            
+        </tbody>
+    </table>
+    <script>        
+        for(i=0;i<150;i++){
+          $('#tableRows').append("<tr onclick=\"location.href='#one'\"><td>"+(i+1)+"</td><td><img src='images/sprites/"+(i+1)+".gif'></td><td>Bulbasaur</td><td><div>Grass</div><div>Poison</div></td></tr>");  
+        }
+    </script>
+    <section ng-controller="mainController">
+        <article ng-view>
+
+        </article>
+    </section>
+</body>
+
+</html>
