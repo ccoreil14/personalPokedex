@@ -1,0 +1,21 @@
+ monster.sync(function (err) {
+        if (err) throw err;
+        for (i = 0; i < 151; i++) {
+            monster.create({
+                name: name[i],
+                number: number[i],
+                type1: types[i][0],
+                type2: types[i][1],
+                baseHp: stats[i][0],
+                baseAtk: stats[i][1],
+                baseDef: stats[i][2],
+                baseSpAtk: stats[i][3],
+                baseSpDef: stats[i][4],
+                baseSpeed: stats[i][5],
+                totalStats: stats[i][6],
+                description: description[i]
+            }, function (err) {
+                if (err) throw err;
+            })
+        }
+    });

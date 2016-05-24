@@ -1,0 +1,15 @@
+{
+  "name": "orm3",
+  "version": "1.0.0",
+  "description": "This is for our orm to work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Coreil",
+  "license": "ISC",
+  "dependencies": {
+    "orm": ">=2.0.0-alpha6",
+    "requirejs": "^2.2.0"
+  }
+}

@@ -1,0 +1,41 @@
+var typeArray = ["Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy"];
+
+    var abilitiesArray = [["Overgrow", "Powers up Grass-type moves when the Pokémon is in trouble."], ["Blaze", "Powers up Fire-type moves when the Pokémon is in trouble."], ["Torent", "Powers up Water-type moves when the Pokémon is in trouble."], ["Shield Dust", "Blocks the additional effects of attacks taken."], ["Shed Skin", "The Pokémon may heal its own status conditions."], ["Compound Eyes", "Boosts the Pokémon's accuracy."], ["Swarm", "Powers up Bug-type moves when the Pokémon is in trouble."], ["Keen Eye", "Prevents other Pokémon from lowering accuracy."], ["Tangled Feet", "Raises evasion if the Pokémon is confused"], ["Run Away", "Enables a sure getaway from wild Pokémon"], ["Guts", "Boosts the Attack stat if the Pokémon has a status condition."], ["Intimidate", "Lowers the opposing Pokémon Attack stat"], ["Static", "Contact with the Pokémon may cause paralysis."], ["Sand Veil", "Boosts the Pokémon's evasion in a sandstorm."], ["Poison Point", "Contact with the Pokémon may poison the attacker."], ["Rivalry", "Deals more damage to Pokémon of the same gender."], ["Cute Charm", "Contact with the Pokémon may cause infatuation."], ["Magic Guard", "The Pokémon only takes damage from attacks."], ["Flash Fire", "Powers up the Pokémon's Fire- type moves if it's hit by one."], ["Competitive", "Boosts the Sp. Atk stat when a stat is lowered."], ["Inner Focus", "Protects the Pokémon from flinching."], ["Chlorophyll", "Boosts the Pokémon's Speed stat in sunshine."], ["Effect Spore", "Contact may poison or cause paralysis or sleep."], ["Dry Skin", "Reduces HP if it's hot. Water restores HP."], ["Tinted Lens", "Powers up not very effective moves."], ["Arena Trap", "Prevents opposing Pokémon from fleeing."], ["Pickup", "The Pokémon may pick up items."], ["Technician", "Powers up the Pokémon's weaker moves."], ["Limber", "Protects the Pokémon from paralysis."], ["Damp", "Prevents the use of self-destructing moves."], ["Cloud Nine", "Eliminates the effects of weather."], ["Vital Spirit", "Prevents the Pokémon from falling asleep."], ["Anger Point", "Maxes the Attack stat after the Pokémon takes a critical hit."], ["Water Absorb", "Restores HP if hit by a Water-type move."], ["Synchronize", "CloseAbility InfoSynchronizePasses poison, paralyze, or burn to the Pokémon that inflicted it."], ["No Guard", "Ensures attacks by or against the Pokémon land."], ["Clear Body", "Prevents other Pokémon from lowering its stats."], ["Liquid Ooze", "Damages attackers using any draining move."], ["Rock Head", "Protects the Pokémon from recoil damage."], ["Sturdy", "It cannot be knocked out with one hit."], ["Run Away", "Enables a sure getaway from wild Pokémon."], ["Oblivious", "Keeps the Pokémon from being infatuated or falling for taunts."], ["Own Tempo", "Prevents the Pokémon from becoming confused."], ["Magnet Pull", "Prevents Steel-type Pokémon from escaping."], ["Early Bird", "The Pokémon awakens quickly from sleep."], ["Thick Fat", "Boosts resistance to Fire- and Ice-type moves."], ["Hydration", "Heals status conditions if it's raining"], ["Stench", "The stench may cause the target to flinch."], ["Sticky Hold", "Protects the Pokémon from item theft."], ["Shell Armor", "Protects the Pokémon from critical hits."], ["Skill Link", "Increases the number of times multi-strike moves hit."], ["Levitate", "Gives full immunity to all Ground-type moves."], ["Insomnia", "Prevents the Pokémon from falling asleep."], ["Forewarn", "Determines what moves an opposing Pokémon has."], ["Hyper Cutter", "Prevents other Pokémon from lowering its Attack stat."], ["Soundproof", "Gives full immunity to all sound-based moves."], ["Lightning Rod", "Draws in all Electric-type moves to boost its Sp. Atk stat."], ["Reckless", "Powers up moves that have recoil damage."], ["Iron Fist", "Powers up punching moves"], ["Natural Cure", "All status conditions heal when the Pokémon switches out."], ["Serene Grace", "Boosts the likelihood of additional effects occurring."], ["Leaf Guard", "Prevents status conditions in sunny weather."], ["Scrappy", "Makes Normal- and Fighting-type moves hit Ghost-type Pokémon."], ["Swift Swim", "Boosts the Pokémon's Speed stat in rain."], ["Sniper", "Powers up moves if they become critical hits."], ["Water Veil", "Prevents the Pokémon from getting a burn."], ["Illuminate", "Raises the likelihood of meeting wild Pokémon."], ["Filter", "Reduces damage from supereffective attacks."], ["Flame Body", "Contact with the Pokémon may burn the attacker."], ["Mold Breaker", "Moves can be used on the target regardless of its Abilities."], ["Adaptability", "Powers up moves of the same type as the Pokémon."], ["Volt Absorb", "Restores HP if hit by an Electric-type move."], ["Trace", "The Pokémon copies an opposing Pokémon's Ability."], ["Download", "Adjusts power based on an opposing Pokémon's stats."], ["Battle Armor", "Protects the Pokémon from critical hits."], ["Pressure", "The Pokémon raises opposing Pokémon's PP usage."], ["Immunity", "Prevents the Pokémon from getting poisoned."]];
+
+    //    var weakness = db.define("weakness", {
+    //        name: String
+    //    });
+
+    var ability = db.define("ability", {
+        name: String,
+        description: String
+    });
+
+    //    var j = 0;
+    //    weakness.sync(function (err) {
+    //            if (err) throw err;
+    //    for (i = 0; i < typeArray.length; i++) {
+    //        
+    //
+    //            weakness.create({
+    //                name: typeArray[j]
+    //            }, function (err) {
+    //                if (err) throw err;
+    //            });
+    //        
+    //        j++;
+    //    }
+    //        });
+
+    ability.sync(function (err) {
+        if (err) throw err;
+        for (i = 0; i < abilitiesArray.length; i++) {
+            ability.create({
+                name: abilitiesArray[i][0],
+                description: abilitiesArray[i][1]
+            }, function (err) {
+                if (err) throw err;
+            });
+
+        }
+    });
